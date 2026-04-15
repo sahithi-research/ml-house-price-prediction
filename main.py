@@ -29,3 +29,29 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_sta
 model = LinearRegression()
 model.fit(X_train,y_train)
 
+# Prediction
+
+y_pred = model.predict(X_test)
+
+# Evaluation
+
+print("Mean Squared Error:", mean_squared_error(y_test,y_pred))
+print("R2 Score:", r2_score(y_test, y_pred))
+
+# Visualization
+
+plt.scatter(X, y, color = "blue", label = "Actual Data")
+plt.plot(X, model.predict(X), color = "red", label = "Prediction Line")
+plt.xlabel("House Size (sqft)")
+plt.ylabel("Prices")
+plt.title("House Price Prediction using Linear Regression")
+plt.legend(loc="upper left")
+plt.grid(True)
+plt.show()
+
+# predict new house price
+
+new_size = np.array([[1100]])
+predicted_price = model.predict(new_size)
+print("Predicted price for 1100 sqft:", predicted_price[0])
+
