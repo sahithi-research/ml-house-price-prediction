@@ -17,7 +17,7 @@ df = pd.Dataframe(data)
 
 # Features (X) and target (y)
 
-X = df[["Size_sqft]]
+X = df[["Size_sqft"]]
 y = df["Price"]
 
 # Train test split
