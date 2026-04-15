@@ -51,7 +51,7 @@ plt.show()
 
 # predict new house price
 
-new_size = np.array([[1100]])
+new_size = pd.DataFrame([[1100]], columns=["Size_sqft"])
 predicted_price = model.predict(new_size)
 print("Predicted price for 1100 sqft:", predicted_price[0])
 
