@@ -13,7 +13,7 @@ data = {
   "Size_sqft": [500, 600, 750, 800, 900, 1000, 1200, 1500, 1800, 2000],
   "Price": [150000, 180000, 200000, 210000, 250000, 270000, 320000, 400000, 450000, 500000]
 }
-df = pd.Dataframe(data)
+df = pd.DataFrame(data)
 
 # Features (X) and target (y)
 
